@@ -56,3 +56,7 @@ chunk_1.wav
 chunk_2.wav
 
 crewai_flow.html
+
+## Note
+
+Removed .env, credentials.json and EarningsCall.wav files due to Security and size issue.
