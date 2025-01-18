@@ -1,0 +1,6 @@
+email_draft_task:
+  description: >
+    Compose and send an email to the client with the meeting minutes using provided email body {body}.    
+  expected_output: >
+    A confirmation indicating whether the email was sent successfully or not.
+  agent: email_draft_writer

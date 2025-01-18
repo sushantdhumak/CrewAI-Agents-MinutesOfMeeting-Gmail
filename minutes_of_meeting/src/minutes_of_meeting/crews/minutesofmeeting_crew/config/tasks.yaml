@@ -1,0 +1,48 @@
+write_meeting_summary:
+  description: >
+    Summarize the provided meeting transcript into a concise summary, extract action items, and analyze the sentiment.
+    Input
+      Meeting transcript: {transcript}
+    Output Requirements
+    1. Summary: Write a concise summary to a file named "summary.txt" in the "meeting_minutes" directory.
+    2. Action Items: Extract action items from the transcript and write them to a file named "action_items.txt" in the "meeting_minutes" directory. 
+      Format action items as:
+      Action item 1
+      Action item 2
+      ...
+    3. Sentiment Analysis: Analyze the sentiment of the meeting transcript and write the result to a file named "sentiment.txt" in the "meeting_minutes" directory.
+  expected_output: >
+    1. A summary of the meeting transcript
+    2. A list of action items in the specified format
+    3. Sentiment analysis result (positive, negative, or neutral)
+    Notes
+      1. The "meeting_of_minutes" directory and required files ("summary.txt", "action_items.txt", "sentiment.txt") will be provided by the tool.
+      2. Ensure the summary, action items, and sentiment analysis are accurate and concise.
+  agent: meeting_summarizer
+
+
+write_minutes_of_meeting:
+  description: >
+    Create a comprehensive meeting minutes document based on the provided summary, action items, and sentiment analysis.
+    Input:
+      1. Summary
+      2. Action items
+      3. Sentiment analysis
+    Output Requirements:
+      Meeting Minutes Document: Write the meeting minutes in a markdown document, including:
+      1. Meeting date (today's date)
+      2. Company name (Sushant@AI)
+      3. Organizer's name (Sushant)
+      4. List of attendees (extract from transcript or create fictional ones if needed)
+      5. Location (Zoom)
+      6. Summary of the meeting
+      7. Action items
+      8. Sentiment analysis
+    Formatting: Use markdown formatting to create a clear and readable document.
+  expected_output: >
+    A well-structured meeting minutes document in markdown format, containing all required information.
+    Notes:
+      1. Use the provided summary, action items, and sentiment analysis to ensure accuracy and completeness.
+      2. Be creative when generating fictional attendee names, if necessary.
+      3. Ensure the document is easy to read and understand.
+  agent: meeting_minutes_writer
