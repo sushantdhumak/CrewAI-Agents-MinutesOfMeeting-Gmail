@@ -59,4 +59,4 @@ crewai_flow.html
 
 ## Note
 
-Removed .env, credentials.json and EarningsCall.wav files due to Security and size issue.
+Removed .env, credentials.json, crewai_flow.html and EarningsCall.wav files due to Security and size issue.
